@@ -1,0 +1,18 @@
+# ── Secrets — NEVER commit these ──────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Vercel internal ───────────────────────────────────────────
+.vercel/
+
+# ── OS clutter ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Node (if ever added) ──────────────────────────────────────
+node_modules/

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0a0a0f"/>
+  <title>Checkout — Gadget N Decor</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">⚡</div>
+    <span>Gadget <em>N</em> Decor</span>
+  </a>
+  <a href="index.html" class="back-link" style="margin:0;font-size:0.85rem">← Keep Shopping</a>
+</nav>
+
+<main class="checkout-page">
+  <a href="javascript:history.back()" class="back-link">← Back</a>
+
+  <!-- SUCCESS -->
+  <div class="success-screen" id="successScreen">
+    <div class="success-icon">✅</div>
+    <h2>Order Placed!</h2>
+    <p>Thank you! We'll call you soon to confirm your delivery.</p>
+    <a href="index.html" class="btn btn-primary" style="display:inline-flex">← Back to Shop</a>
+  </div>
+
+  <!-- FORM + SUMMARY -->
+  <div id="checkoutForm">
+    <h1 class="checkout-title">Complete Your Order</h1>
+
+    <div class="checkout-layout">
+
+      <!-- DELIVERY FORM -->
+      <div class="form-card">
+        <div class="form-section-title">Delivery Information</div>
+
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input id="name" type="text" placeholder="e.g. Rahim Uddin" autocomplete="name"/>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" type="tel" placeholder="e.g. 01712345678" autocomplete="tel" inputmode="tel"/>
+        </div>
+        <div class="form-group">
+          <label for="address">Delivery Address *</label>
+          <textarea id="address" rows="3" placeholder="House / Road / Area, Thana, District"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="note">Order Note <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+          <input id="note" type="text" placeholder="Any special instructions?"/>
+        </div>
+
+        <!-- DELIVERY ZONE SELECTOR -->
+        <div class="form-section-title" style="margin-top:1.5rem">Delivery Zone</div>
+        <div class="zone-selector" id="zoneSelector">
+          <label class="zone-option active" id="zone-inside">
+            <input type="radio" name="zone" value="inside" checked onchange="onZoneChange('inside')"/>
+            <div class="zone-option-inner">
+              <div class="zone-icon">🏙️</div>
+              <div class="zone-text">
+                <strong>Inside Dhaka</strong>
+                <span>৳ 70 delivery</span>
+              </div>
+              <div class="zone-check">✓</div>
+            </div>
+          </label>
+          <label class="zone-option" id="zone-outside">
+            <input type="radio" name="zone" value="outside" onchange="onZoneChange('outside')"/>
+            <div class="zone-option-inner">
+              <div class="zone-icon">🗺️</div>
+              <div class="zone-text">
+                <strong>Outside Dhaka</strong>
+                <span>৳ 130 delivery</span>
+              </div>
+              <div class="zone-check">✓</div>
+            </div>
+          </label>
+        </div>
+
+        <div class="form-section-title" style="margin-top:1.5rem">Payment Method</div>
+        <div class="payment-badge">
+          <span class="payment-badge-label">✓ Selected</span>
+          <span style="font-size:0.95rem">Cash on Delivery</span>
+        </div>
+      </div>
+
+      <!-- ORDER SUMMARY -->
+      <div class="order-summary">
+        <div class="summary-title">Order Summary</div>
+
+        <!-- Cart items injected here -->
+        <div id="checkoutItemsList"></div>
+
+        <hr class="summary-divider"/>
+        <div class="summary-row"><span>Subtotal</span><span id="coSubtotal">—</span></div>
+        <div class="summary-row"><span>Delivery</span><span id="coDelivery">—</span></div>
+        <div class="summary-total"><span>Total</span><span id="coTotal">—</span></div>
+
+        <button class="place-order-btn" id="placeOrderBtn" onclick="submitOrder()">
+          <span class="btn-text">Place Order →</span>
+          <span class="btn-spinner"></span>
+        </button>
+        <p style="text-align:center;font-size:0.72rem;color:var(--muted);margin-top:0.75rem;line-height:1.5">
+          Payment collected on delivery. By placing an order you agree to our terms.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script type="module" src="/js/script.js"></script>
+</body>
+</html>

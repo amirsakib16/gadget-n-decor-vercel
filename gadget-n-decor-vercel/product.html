@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0a0a0f"/>
+  <title>Product — Gadget N Decor</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">⚡</div>
+    <span>Gadget <em>N</em> Decor</span>
+  </a>
+  <button class="nav-cart-btn" onclick="openCartDrawer()">
+    <span>🛒</span><span>Cart</span>
+    <span class="cart-badge">0</span>
+  </button>
+</nav>
+
+<main class="product-page">
+  <a href="index.html" class="back-link">← Back to Shop</a>
+
+  <div class="product-layout">
+    <div class="gallery">
+      <div class="main-image-wrap">
+        <img id="mainImage" src="" alt="Product"/>
+      </div>
+      <div class="thumbnail-track" id="thumbnailGallery"></div>
+    </div>
+
+    <div class="product-info">
+      <div class="product-badge">⚡ In Stock</div>
+      <h1 class="product-name" id="productName"></h1>
+      <p class="product-desc" id="productDescription"></p>
+
+      <div class="price-block">
+        <div>
+          <div class="price-label">Price</div>
+          <div class="price-main" id="productPrice"></div>
+        </div>
+        <div class="price-delivery">+ ৳70–130<strong>Delivery</strong></div>
+      </div>
+
+      <div>
+        <div class="qty-label">Quantity</div>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeQuantity(-1)">−</button>
+          <div class="qty-num" id="quantity">1</div>
+          <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+        </div>
+      </div>
+
+      <div class="product-cta">
+        <button class="btn btn-buy" onclick="buyNow()">⚡ Buy Now</button>
+        <button class="btn btn-cart" onclick="addToCartFromPage()">🛒 Add to Cart</button>
+      </div>
+
+      <div class="trust-badges">
+        <span class="trust-badge">✓ Cash on Delivery</span>
+        <span class="trust-badge">✓ Genuine Product</span>
+        <span class="trust-badge">✓ 7-Day Returns</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script type="module" src="/js/script.js"></script>
+</body>
+</html>
