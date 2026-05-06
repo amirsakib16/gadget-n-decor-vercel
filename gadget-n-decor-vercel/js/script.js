@@ -35,9 +35,9 @@ const products = {
     description: "Premium noise-cancelling headphones with 30-hour battery life, 40mm drivers, and foldable design for on-the-go comfort.",
     badge: "Best Seller",
     images: [
-      "images/products/product_Acover.jpeg",
-      "images/products/product_Acover2.jpeg",
-      "images/products/product_A.jpeg"
+      "/images/products/product_Acover.jpeg",
+      "/images/products/product_Acover2.jpeg",
+      "/images/products/product_A.jpeg"
     ]
   },
   2: {
@@ -47,13 +47,12 @@ const products = {
     description: "Advanced health & fitness tracker with SpO2, heart rate, sleep monitoring, 7-day battery, and 50m water resistance.",
     badge: "New Arrival",
     images: [
-      "images/products/product_Bcover.jpeg",
-      "images/products/product_Bcover2.jpeg",
-      "images/products/product_B.jpeg"
+      "/images/products/product_Bcover.jpeg",
+      "/images/products/product_Bcover2.jpeg",
+      "/images/products/product_B.jpeg"
     ]
   }
 };
-
 // ================================================================
 //  CART  — full stack, persisted in localStorage
 // ================================================================
