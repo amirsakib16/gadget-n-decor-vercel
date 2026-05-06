@@ -1,12 +1,9 @@
 {
-  "buildCommand": "node build.js",
-  "outputDirectory": ".",
-  "installCommand": "echo 'no install needed'",
-  "framework": null,
+  "version": 2,
+  "cleanUrls": true,
+  "framework": "vite",
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/product", "destination": "/product.html" },
-    { "source": "/checkout", "destination": "/checkout.html" }
+    { "source": "/(.*)", "destination": "/" }
   ],
   "headers": [
     {
